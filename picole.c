@@ -1,10 +1,11 @@
 #include "Dependencies/glfw3.h"
 #include <stdio.h>
+#include <GL/gl.h>
 
 int main(void)
 {
     const int LARGURA = 500;
-    const int ALTURA = 400;
+    const int ALTURA = 500;
     /* Initialize the library */
     glfwInit();
 
@@ -18,7 +19,7 @@ int main(void)
     glClearColor(0.0, 0.0, 0.0, 0.0); // COR DO FUNDO
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(0.0f, LARGURA, ALTURA, 0.0f, 0.0f, 1.0f);
+    glOrtho(0.0f, LARGURA, 0.0f, ALTURA, 0.0f, 1.0f);
     // glOrtho(-10.0, 10.0, -10.0, 10.0, 1.0, -1.0);
 
     /* Loop until the user closes the window */
